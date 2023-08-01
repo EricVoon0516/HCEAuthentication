@@ -12,6 +12,7 @@ Software:
   2. Arduino IDE
 
 HCE Android development:  https://developer.android.com/guide/topics/connectivity/nfc/hce
+
 The connection of PN532:  https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
 
 After reading the documentation provided by Android Developer, you will notice:
