@@ -21,9 +21,9 @@ The connection of PN532:  https://how2electronics.com/interfacing-pn532-nfc-rfid
 
 ## Implementation
 After reading the documentation provided by Android Developer, you will notice:
-   1. Before you develop an Android application with HCE features, please study the declaration of manifest and AID registration: https://developer.android.com/guide/topics/connectivity/nfc/hce#manifest-declaration
-   2. Appication ID (AID) is important to help the Android phones for recognising the application protocol data unit (APDU) command from the NFC reader. You can have multiple AIDs (the AID shall be ca within an application.
-   3. Before registering the AID, you will need to declare `<service>` in manifest's `<application>`, as shown:
+> Before you develop an Android application with HCE features, please study the declaration of manifest and AID registration: https://developer.android.com/guide/topics/connectivity/nfc/hce#manifest-declaration
+> Without the registration of AID and delcaration of HCE service, you cannot enable HCE features in your application. Appication ID (AID) is important to help the Android phones for recognising the application protocol data unit (APDU) command from the NFC reader. You can have multiple AIDs (the AID shall be ca within an application.
+   1. Before registering the AID, you will need to declare `<service>` in **manifest**'s `<application>`, as shown:
 ```
 <application>
    ...
@@ -37,8 +37,9 @@ After reading the documentation provided by Android Developer, you will notice:
    </service>
    ...
 </application>
-```   
-   4. 
+```
+
+   2. After that, you will need to register for the AID. There are two different categories of AID you can register; payment or other.
 ```
 public class MyHostApduService extends HostApduService {
     @Override
