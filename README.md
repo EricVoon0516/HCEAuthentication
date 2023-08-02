@@ -21,7 +21,9 @@ The connection of PN532:  https://how2electronics.com/interfacing-pn532-nfc-rfid
 
 ## Implementation
 After reading the documentation provided by Android Developer, you will notice:
-   1. 
+   1. Before you develop an Android application with HCE features, please study the declaration of manifest and AID registration: https://developer.android.com/guide/topics/connectivity/nfc/hce#manifest-declaration
+   2. Appication ID (AID) is important to help the Android phones for recognising the application protocol data unit (APDU) command from the NFC reader. You can have multiple AIDs (the AID shall be ca within an application.
+   3. Before registering the AID, you will need to declare `<service>` in manifest's `<application>`
 ```
 public class MyHostApduService extends HostApduService {
     @Override
@@ -35,3 +37,5 @@ public class MyHostApduService extends HostApduService {
 }
 ```
 The `public byte[] processCommandApdu(byte[] apdu, Bundle extras) {...}` is performing the data exchange between Anroid phones and NFC reader.
+![image](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/c4111963-1aec-41b9-81e2-93967f59770a)
+
