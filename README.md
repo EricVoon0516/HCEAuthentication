@@ -79,4 +79,9 @@ public class MyHostApduService extends HostApduService {
 > The `public byte[] processCommandApdu(byte[] apdu, Bundle extras) {...}` is performing the data exchange between Anroid phones and NFC reader.
 
 ![image](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/c4111963-1aec-41b9-81e2-93967f59770a)
-
+> > In this case, when the phone receives the APDU command from the NFC reader, the application will start `MainActivity.class` of the application and response with `Hello` in bytes, which are {0x48, 0x65, 0x6C, 0x6C, 0x6F} to the NFC reader.
+> > 
+> > The value of APDU command from NFC reader shall be same as the registered AID; the AID of this application is {0xF0, 0x01, 0x02, 0x03, 0x04, 0x05 0x06} and APDU command of NFC reader shall be the same.
+>
+> You can have different conditions when the phones recognise the APDU command. Just code it, and have fun. :smile:
+> 
