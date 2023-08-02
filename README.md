@@ -1,6 +1,6 @@
 # HCEAuthentication
 This repository contains development of security system with the implementation of HCE, HCE Android application development and Arduino codes.
-Using Arduino to enabling HCE features of Android phone.
+Using Arduino to enabling HCE features of Android phone. Get yourself familiar to Java and C (C & C++) programming languages.
 
 ## List of materials:
    1. Arduino UNO
@@ -12,9 +12,9 @@ Using Arduino to enabling HCE features of Android phone.
   2. Arduino IDE:      https://www.arduino.cc/en/software
 
 ## Documentation
-HCE Android development:  https://developer.android.com/guide/topics/connectivity/nfc/hce
+HCE Android development:   https://developer.android.com/guide/topics/connectivity/nfc/hce
 
-The connection of PN532:  https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
+The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
 
 ## Connection of PN532 to Arduino UNO
 ![PN532 Connection drawio](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/84884d53-21da-4b60-9d17-251f494be62f)
@@ -24,7 +24,7 @@ The connection of PN532:  https://how2electronics.com/interfacing-pn532-nfc-rfid
 After reading the documentation provided by Android Developer, you will notice:
 > Before you develop an Android application with HCE features, please study the declaration of manifest and AID registration: https://developer.android.com/guide/topics/connectivity/nfc/hce#manifest-declaration
 > 
-> Without the registration of AID and delcaration of HCE service, you cannot enable HCE features in your application. Appication ID (AID) is important to help the Android phones for recognising the application protocol data unit (APDU) command from the NFC reader. You can have multiple AIDs (the AID shall be ca within an application.
+> Without the registration of AID and delcaration of HCE service, you cannot enable HCE features in your application. Appication ID (AID) is important to help the Android phones for recognising the application protocol data unit (APDU) command from the NFC reader. You can have multiple AIDs (the AID shall be can within an application.
    1. Before registering the AID, you will need to declare `<service>` in **manifest**'s `<application>`, as shown:
 ```
 <application>
@@ -86,3 +86,7 @@ public class MyHostApduService extends HostApduService {
 > You can have different conditions when the phones recognise the APDU command. Just code it, and have fun. :smile:
 > 
 ### Arduino Coding
+> You can refer to the documentation[^1].
+> In this section, I will briefly guide you through the Arduino coding.
+
+[^1]: The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
