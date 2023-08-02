@@ -105,7 +105,7 @@ PN532 nfc(pn532_i2c);
 > Remember to include the libraries that are required and its general setup.
 > 
 ```
-uint8_t SELECT_APDU[] = {
+uint8_t selectApdu[] = {
   0x00, /* CLA */
   0xA4, /* INS */
   0x04, /* P1  */
@@ -119,8 +119,24 @@ uint8_t SELECT_APDU[] = {
 > 
 ```
 uint8_t AvailableResponse[32];
+uint8_t responseLength = 32;
 ```
-> This `AvaliableResponse[32]` is the response sent from the Android phones. Do you still remember Android 
+> This `AvaliableResponse[32]` is the response sent from the Android phones. Do you still remember Android application we have the `String response = "Hello";` and converting this string response to bytes with `return response.getBytes();`. This return will response to the `AvailableResponse[32]` <sup> (only 32 bytes of responese is allowed in this case) </sup>. 
+
+![image](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/c4111963-1aec-41b9-81e2-93967f59770a)
+
+```
+bool success = nfc.inDataExchange(selectApdu, sizeof(selectApdu), AvailableResponse, &responseLength);  
+if (success) {...}
+```
+> The `nfc.inDataExchange` will send the `selectApdu` and the size of the `selectApdu` to the HCE enabling Android phone for enbaling the application's HCE features.
+> After the phone recognises the APDU <sup> (selectApdu) </sup>, the phone will response with the "result of the return" in bytes to the NFC reader
+> > In this case, the phone received and recognised <sup> (this means the selectApdu has the same registered AID in the application) </sup> the APDU command and it will send 'Hello' in bytes which are `{0x48, 0x65, 0x6C, 0x6C, 0x6F}` to the reader as the response. Now, we can use the response for different condition, such as authentication.
+> > For example:
+> > ```
+> > if (AvailableResponse[] == ...) {...}
+> > ```
+> >
    4. 
    5. 
 
