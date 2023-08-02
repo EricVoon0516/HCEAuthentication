@@ -87,6 +87,7 @@ public class MyHostApduService extends HostApduService {
 > 
 ### Arduino Coding
 > You can refer to the documentation[^1].
-> In this section, I will briefly guide you through the Arduino coding.
+> 
+> In this section, I will briefly guide you through the Arduino coding. Firstly, you need to prepare yourself an Arduino, regardless which board that you are going to use <sup> (just make ure it is Arduino compatible) </sup>, and install Arduino IDE to your computer. You are welcome to use any board other than Arduino <sup> (eg. Raspberry) </sup>, but I am going to use Arduino to demonstrate the implementation of HCE authentication.
 
 [^1]: The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
