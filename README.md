@@ -59,6 +59,11 @@ This is the registration of AID:
 ```
 > The `<aid-filter>` is defining the AID in hexadecimal value. In this case, `<aid-filter android:name="F0010203040506"/>` means one of AIDs of this application <sup> (there are 2 AIDs have been registered in this scenario) </sup> is {0xF0, 0x01, 0x02, 0x03, 0x04, 0x05 0x06}.
    4. Now, you can create `MyHostApduService` class <sup> (you might notice the name of the class is same as name of service in the manifest's `<service>`) </sup> and with the extend of `HostApduService`.
+> 
+> It is important for the Android phones to recognise the APDU <sup> (APDU consists of AID) </sup> of this application for enabling HCE features of this particular application.
+>
+![HCE drawio](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/e90692c9-8b89-40b9-8508-fceb74d4ab70)
+> Without the APDU command sent from the NFC reader, the phone will not be enabling the HCE for that application <sup> (your application) </sup>.
 ```
 public class MyHostApduService extends HostApduService {
     @Override
