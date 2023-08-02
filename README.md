@@ -16,8 +16,12 @@ HCE Android development:  https://developer.android.com/guide/topics/connectivit
 
 The connection of PN532:  https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
 
+## Connection of PN532 to Arduino UNO
+![PN532 Connection drawio](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/84884d53-21da-4b60-9d17-251f494be62f)
+
 ## Implementation
 After reading the documentation provided by Android Developer, you will notice:
+   1. 
 ```
 public class MyHostApduService extends HostApduService {
     @Override
