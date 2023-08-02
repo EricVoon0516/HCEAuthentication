@@ -22,6 +22,7 @@ The connection of PN532:  https://how2electronics.com/interfacing-pn532-nfc-rfid
 ## Implementation
 After reading the documentation provided by Android Developer, you will notice:
 > Before you develop an Android application with HCE features, please study the declaration of manifest and AID registration: https://developer.android.com/guide/topics/connectivity/nfc/hce#manifest-declaration
+> 
 > Without the registration of AID and delcaration of HCE service, you cannot enable HCE features in your application. Appication ID (AID) is important to help the Android phones for recognising the application protocol data unit (APDU) command from the NFC reader. You can have multiple AIDs (the AID shall be ca within an application.
    1. Before registering the AID, you will need to declare `<service>` in **manifest**'s `<application>`, as shown:
 ```
@@ -39,7 +40,23 @@ After reading the documentation provided by Android Developer, you will notice:
 </application>
 ```
 
-   2. After that, you will need to register for the AID. There are two different categories of AID you can register; payment or other.
+   2. Then, you will need to register for the AID. There are two different categories of AID you can register; payment or other.
+   3. You need to create xml resource file (name it as `apduservice`) at the file path `.main\res\xml`.
+> The name of the resource file can be ammended according to your preferences, but it should be same as the name you have declared in the manifest:`<meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource=` **`"@xml/apduservice"`** `/>`.
+
+This is the registration of AID:
+```
+<host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
+           android:description="@string/servicedesc"
+           android:requireDeviceUnlock="false">
+    <aid-group android:description="@string/aiddescription"
+               android:category="other">
+        <aid-filter android:name="F0010203040506"/>
+        <aid-filter android:name="F0394148148100"/>
+    </aid-group>
+</host-apdu-service>
+```
+   4. 
 ```
 public class MyHostApduService extends HostApduService {
     @Override
