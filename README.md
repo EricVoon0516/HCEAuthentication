@@ -1,6 +1,6 @@
 # HCEAuthentication
 This repository contains development of security system with the implementation of HCE, HCE Android application development and Arduino codes.
-Using Arduino to enabling HCE features of Android phone
+Using Arduino to enabling HCE features of Android phone.
 
 ## List of materials:
    1. Arduino UNO
@@ -8,8 +8,8 @@ Using Arduino to enabling HCE features of Android phone
    3. Android phones
 
 ## Software:
-  1. Android Studio
-  2. Arduino IDE
+  1. Android Studio:   https://developer.android.com/studio?gclid=CjwKCAjw_aemBhBLEiwAT98FMq-8NRAZYn0AiymZutJLZKTLktTCV2I9DBgDXp8_HawybEUhCpFFCBoCIvsQAvD_BwE&gclsrc=aw.ds
+  2. Arduino IDE:      https://www.arduino.cc/en/software
 
 ## Documentation
 HCE Android development:  https://developer.android.com/guide/topics/connectivity/nfc/hce
