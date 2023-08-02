@@ -20,6 +20,7 @@ The connection of PN532:  https://how2electronics.com/interfacing-pn532-nfc-rfid
 ![PN532 Connection drawio](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/84884d53-21da-4b60-9d17-251f494be62f)
 
 ## Implementation
+### Android Application Development
 After reading the documentation provided by Android Developer, you will notice:
 > Before you develop an Android application with HCE features, please study the declaration of manifest and AID registration: https://developer.android.com/guide/topics/connectivity/nfc/hce#manifest-declaration
 > 
@@ -56,7 +57,8 @@ This is the registration of AID:
     </aid-group>
 </host-apdu-service>
 ```
-   4. 
+> The `<aid-filter>` is defining the AID in hexadecimal value. In this case, `<aid-filter android:name="F0010203040506"/>` means one of AIDs of this application <sup> (there are 2 AIDs have been registered in this scenario) </sup> is {0xF0, 0x01, 0x02, 0x03, 0x04, 0x05 0x06}.
+   4. Now, you can create `MyHostApduService` class <sup> (you might notice the name of the class is same as name of service in the manifest's `<service>`) </sup> and with the extend of `HostApduService`.
 ```
 public class MyHostApduService extends HostApduService {
     @Override
@@ -69,6 +71,6 @@ public class MyHostApduService extends HostApduService {
     }
 }
 ```
-The `public byte[] processCommandApdu(byte[] apdu, Bundle extras) {...}` is performing the data exchange between Anroid phones and NFC reader.
+> The `public byte[] processCommandApdu(byte[] apdu, Bundle extras) {...}` is performing the data exchange between Anroid phones and NFC reader.
 ![image](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/c4111963-1aec-41b9-81e2-93967f59770a)
 
