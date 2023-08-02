@@ -88,8 +88,40 @@ public class MyHostApduService extends HostApduService {
 ### Arduino Coding
 > You can refer to the documentation[^1].
 > 
-> In this section, I will briefly guide you through the Arduino coding. Firstly, you need to prepare yourself an Arduino, regardless which board that you are going to use <sup> (just make ure it is Arduino compatible) </sup>, and install Arduino IDE to your computer. You are welcome to use any board other than Arduino <sup> (eg. Raspberry) </sup>, but I am going to use Arduino to demonstrate the implementation of HCE authentication.
+> In this section, I will briefly guide you through the Arduino coding. Firstly, you need to prepare yourself an Arduino, regardless which board that you are going to use <sup> (just make sure it is Arduino compatible) </sup>, and install Arduino IDE to your computer. You are welcome to use any board other than Arduino <sup> (eg. Raspberry) </sup>, but I am going to use Arduino to demonstrate the implementation of HCE authentication.
 
-   1. 
+   1. Download the library: https://github.com/elechouse/PN532/tree/PN532_HSU
+Be aware that zipfile contains mutliple libraries, you might need to extract and sort out all libraries, to prevent "libray not found" issue.
+   2. You will see there is similar example for Android HCE. https://github.com/elechouse/PN532/blob/PN532_HSU/PN532/examples/android_hce/android_hce.ino
+You may use it or ammend the code according to the condition that you want.
+```
+#include <Wire.h>
+#include <PN532_I2C.h>
+#include <PN532.h>
+
+PN532_I2C pn532_i2c(Wire);
+PN532 nfc(pn532_i2c);
+```
+> Remember to include the libraries that are required and its general setup.
+> 
+```
+uint8_t SELECT_APDU[] = {
+  0x00, /* CLA */
+  0xA4, /* INS */
+  0x04, /* P1  */
+  0x00, /* P2  */
+  0x07, /* Length of AID  */
+  0xF0, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, /* AID  */
+  0x00  /* Le  */
+};
+```
+> This is an important array to define the APDU command for enabling Android HCE. As you can see, the `selectApdu[]` has the same value as we register for our AID {0xF0, 0x01, 0x02, 0x03, 0x04, 0x05 0x06}. You may change the AID but make sure you are following the rules that are stated in the documentation.
+> 
+```
+uint8_t AvailableResponse[32];
+```
+> This `AvaliableResponse[32]` is the response sent from the Android phones. Do you still remember Android 
+   4. 
+   5. 
 
 [^1]: The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
