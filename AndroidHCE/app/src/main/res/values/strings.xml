@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application 2</string>
+    <string name="servicedesc">Non Payment</string>
+    <string name="aiddescription">For Non Payment</string>
+</resources>
