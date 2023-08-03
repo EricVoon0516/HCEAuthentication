@@ -164,6 +164,6 @@ if (success) {...}
 > > There are many ways to compare two variable for authentication, and this is the simpliest measure for authentication; this way of authentication has the limitation of authentication efficiency.
 > 
 
-   5. 
+   5. You may use the example code `android_hce` in `PN532` library, or you can try to modify the code <sup> (Just make sure those elements that I have mentioned are included in your code) </sup>. Yet, you may also need to study the documentation before starting this Android HCE application and Arduino coding. Have fun in coding 😄.
 
 [^1]: The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
