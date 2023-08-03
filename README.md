@@ -160,10 +160,10 @@ if (success) {...}
 > > >        return true;  
 > > >      }
 > > > ```
-> >
+> > > 
+> > There are many ways to compare two variable for authentication, and this is the simpliest measure for authentication; this way of authentication has the limitation of authentication efficiency.
 > 
 
- 
    5. 
 
 [^1]: The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
