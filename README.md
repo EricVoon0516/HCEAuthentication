@@ -92,7 +92,7 @@ public class MyHostApduService extends HostApduService {
 
    1. Download the library: https://github.com/elechouse/PN532/tree/PN532_HSU
 Be aware that zipfile contains mutliple libraries, you might need to extract and sort out all libraries, to prevent "libray not found" issue.
-   2. You will see there is similar example for Android HCE. https://github.com/elechouse/PN532/blob/PN532_HSU/PN532/examples/android_hce/android_hce.ino
+   2. You will see there is similar example for Android HCE. https://github.com/elechouse/PN532/blob/PN532_HSU/PN532/examples/android_hce/android_hce.ino.
 You may use it or ammend the code according to the condition that you want.
 ```
 #include <Wire.h>
@@ -121,9 +121,8 @@ uint8_t selectApdu[] = {
 uint8_t AvailableResponse[32];
 uint8_t responseLength = 32;
 ```
-> This `AvaliableResponse[32]` is the response sent from the Android phones. Do you still remember Android application we have the `String response = "Hello";` and converting this string response to bytes with `return response.getBytes();`. This return will response to the `AvailableResponse[32]` <sup> (only 32 bytes of responese is allowed in this case) </sup>. 
-
-![image](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/c4111963-1aec-41b9-81e2-93967f59770a)
+> This `AvaliableResponse[32]` is the response sent from the Android phones. Do you still remember Android application we have the `String response = "Hello";` and converting this string response to bytes with `return response.getBytes();`. This return will response to the `AvailableResponse[32]` <sup> (only 32 bytes of responese is allowed in this case) </sup>.
+> ![image](https://github.com/EricVoon0516/HCEAuthentication/assets/96558437/c4111963-1aec-41b9-81e2-93967f59770a)
 
 ```
 bool success = nfc.inDataExchange(selectApdu, sizeof(selectApdu), AvailableResponse, &responseLength);  
@@ -132,12 +131,39 @@ if (success) {...}
 > The `nfc.inDataExchange` will send the `selectApdu` and the size of the `selectApdu` to the HCE enabling Android phone for enbaling the application's HCE features.
 > After the phone recognises the APDU <sup> (selectApdu) </sup>, the phone will response with the "result of the return" in bytes to the NFC reader
 > > In this case, the phone received and recognised <sup> (this means the selectApdu has the same registered AID in the application) </sup> the APDU command and it will send 'Hello' in bytes which are `{0x48, 0x65, 0x6C, 0x6C, 0x6F}` to the reader as the response. Now, we can use the response for different condition, such as authentication.
+> > The byte of data exchange between devices is the value of "string of characters" <sup> (referring hexadecimal value of each character in ASCII table, including special characters, special commands and spacing) </sup>; the devices will recognise those hex bytes for data transmission.
 > > For example:
 > > ```
-> > if (AvailableResponse[] == ...) {...}
+> > /*
+> > for (int n = 0; n < 5; n++)
+> > /*
+> >    The value 5 can be changed to the responseLength, meaning it will follow the size of response sent from Android phone.
+> >    You may change the variable 'n' to other variable.
+> >    This for loop is for iteration of comparing different bytes in same position of different arrays, this is a common method for UID's NFC authentication.
+> > */ 
+> > {
+> >    //if (AvailableResponse[n] == ...) //Make sure it is comparing with other variables; this is the 
+> >    {/* write your condition here*/}    
+> > }
+> > */
 > > ```
 > >
-   4. 
+> > > This is example code for comapring bytes.
+> > > ```
+> > > ///////////////////////////////////////// Check Bytes   ///////////////////////////////////
+> > >      bool checkTwo ( byte a[], byte b[] ) {   
+> > >        for ( uint8_t k = 0; k < 4; k++ ) {   // Loop 4 times
+> > >          if ( a[k] != b[k] ) {     // IF a != b then false, because: one fails, all fail
+> > >             return false;
+> > >          }
+> > >        }
+> > >        return true;  
+> > >      }
+> > > ```
+> >
+> 
+
+ 
    5. 
 
 [^1]: The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfid-module-with-arduino/
