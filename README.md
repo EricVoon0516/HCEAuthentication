@@ -139,7 +139,7 @@ if (success) {...}
 > > /*
 > >    The value 5 can be changed to the responseLength, meaning it will follow the size of response sent from Android phone.
 > >    You may change the variable 'n' to other variable.
-> >    This for loop is for iteration of comparing different bytes in same position of different arrays, this is a common method for UID's NFC authentication.
+> >    This for loop is the iteration of comparing different bytes in same position of different arrays, this is a common method for UID's NFC authentication.
 > > */ 
 > > {
 > >    //if (AvailableResponse[n] == ...) //Make sure it is comparing with other variables; this is the 
