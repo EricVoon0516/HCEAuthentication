@@ -41,6 +41,8 @@ The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfi
 
 ## Implementation
 ### Android Application Development
+Path: [AndroidHCE](https://github.com/EricVoon0516/HCEAuthentication/tree/bbd375988e1c878463f3124cf35a9e5a6d1b3a98/AndroidHCE)
+
 After reading the documentation provided by Android Developer, you will notice:
 > Before you develop an Android application with HCE features, please study the declaration of manifest and AID registration: https://developer.android.com/guide/topics/connectivity/nfc/hce#manifest-declaration
 > 
@@ -106,6 +108,8 @@ public class MyHostApduService extends HostApduService {
 > You can have different conditions when the phones recognise the APDU command. Just code it, and have fun. :smile:
 > 
 ### Arduino Coding
+Path: [Arduino Coding](https://github.com/EricVoon0516/HCEAuthentication/tree/bbd375988e1c878463f3124cf35a9e5a6d1b3a98/APDU_Command)
+
 > You can refer to the documentation[^1].
 > 
 > In this section, I will briefly guide you through the Arduino coding. Firstly, you need to prepare yourself an Arduino, regardless which board that you are going to use <sup> (just make sure it is Arduino compatible) </sup>, and install Arduino IDE to your computer. You are welcome to use any board other than Arduino <sup> (eg. Raspberry) </sup>, but I am going to use Arduino to demonstrate the implementation of HCE authentication.
