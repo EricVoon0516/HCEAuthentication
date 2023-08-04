@@ -23,7 +23,7 @@ Using Arduino to enabling HCE features of Android phone. Get yourself familiar t
 > Happy coding and have fun with NFC :smile:
 
 
-## List of materials:
+## List of Materials:
    1. Arduino UNO
    2. PN532
    3. Android phones
