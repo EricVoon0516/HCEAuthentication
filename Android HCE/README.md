@@ -1,1 +1,0 @@
-# Android HCE application development
