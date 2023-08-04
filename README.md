@@ -6,7 +6,7 @@ Using Arduino to enabling HCE features of Android phone. Get yourself familiar t
    1. The `Android HCE.zip` is same as `AndroidHCE`, the difference is just one is compressed and another one is original file.
       > You can directly import `AndroidHCE` as a project in Android Studio. Documentation: https://developer.android.com/studio/intro/migrate
    2. Study the `README.md` of this repository and supported documention regarding implementain of HCE before developing HCE application.
-   3. `AndroidHCE` and `Android HCE.zip` require minimum API (application programming interface, [What is API](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)) is 26 (Android 8.0). 
+   3. `AndroidHCE` and `Android HCE.zip` require minimum API (application programming interface, [What is API](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)) is **26 (Android 8.0)** for emulating and implementing to Android phone. 
       
 > **Disclaimer:**
 >
@@ -43,7 +43,8 @@ The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfi
 ## Implementation
 ### Android Application Development
 Path: [AndroidHCE](https://github.com/EricVoon0516/HCEAuthentication/tree/bbd375988e1c878463f3124cf35a9e5a6d1b3a98/AndroidHCE)
-
+> Requires minSDK is **26 (Android 8.0)**
+> 
 After reading the documentation provided by Android Developer, you will notice:
 > Before you develop an Android application with HCE features, please study the declaration of manifest and AID registration: https://developer.android.com/guide/topics/connectivity/nfc/hce#manifest-declaration
 > 
