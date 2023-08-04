@@ -2,6 +2,26 @@
 This repository contains development of security system with the implementation of HCE, HCE Android application development and Arduino codes.
 Using Arduino to enabling HCE features of Android phone. Get yourself familiar to Java <sup> (Java or Kotlin, it depends on yourself; I prefer Java because there are many resources that I found is in Java) </sup> and C (C & C++) programming languages.
 
+## Things you need to know before downloading the code file:
+   1. The `Android HCE.zip` is same as `AndroidHCE`, the difference is just one is compressed and another one is original file.
+      > You can directly import `AndroidHCE` as a project in Android Studio. Documentation: https://developer.android.com/studio/intro/migrate
+   2. Study the `README.md` of this repository and supported documention regarding implementain of HCE.
+      
+> **Disclaimer:**
+>
+> **As the author of the code provided, I want to make it clear that this code is intended for educational and illustrative purposes only. While I have made efforts to ensure the accuracy and functionality of the code, it may still contain errors, bugs, or unintended behaviors. Therefore, I cannot guarantee its suitability for any specific purpose or its fitness for any particular application.**
+> 
+> **You are free to use, modify, and distribute this code as per the terms of the applicable licenses and laws. However, I assume no responsibility or liability for any direct or indirect damages, loss of data, or any other negative consequences that may arise from the use or misuse of this code.**
+> 
+> **Before using this code in any critical or production environments, it is strongly recommended to thoroughly review and test it to ensure its reliability and security. Additionally, I advise seeking professional assistance or guidance for complex or sensitive projects.**
+> 
+> **By using this code, you acknowledge and accept that I am not responsible for any consequences resulting from its use and agree to hold me harmless from any claims, damages, or liabilities that may arise.**
+> 
+> **Please use this code responsibly and at your own risk. Always exercise caution and use your best judgment when working with code or software.**
+>
+> Happy coding and have fun with NFC :smile:
+
+
 ## List of materials:
    1. Arduino UNO
    2. PN532
