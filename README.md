@@ -5,7 +5,7 @@ Using Arduino to enabling HCE features of Android phone. Get yourself familiar t
 ## Things you need to know before downloading the code file:
    1. The `Android HCE.zip` is same as `AndroidHCE`, the difference is just one is compressed and another one is original file.
       > You can directly import `AndroidHCE` as a project in Android Studio. Documentation: https://developer.android.com/studio/intro/migrate
-   2. Study the `README.md` of this repository and supported documention regarding implementain of HCE.
+   2. Study the `README.md` of this repository and supported documention regarding implementain of HCE before starting implementation of HCE.
       
 > **Disclaimer:**
 >
