@@ -2,7 +2,7 @@
 This repository contains development of security system with the implementation of HCE, HCE Android application development and Arduino codes.
 Using Arduino to enabling HCE features of Android phone. Get yourself familiar to Java <sup> (Java or Kotlin, it depends on yourself; I prefer Java because there are many resources that I found is in Java) </sup> and C (C & C++) programming languages.
 
-## Things you need to know before downloading the code file:
+## Things You Need to Know before Downloading the Code File:
    1. The `Android HCE.zip` is same as `AndroidHCE`, the difference is just one is compressed and another one is original file.
       > You can directly import `AndroidHCE` as a project in Android Studio. Documentation: https://developer.android.com/studio/intro/migrate
    2. Study the `README.md` of this repository and supported documention regarding implementain of HCE before developing HCE application.
