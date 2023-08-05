@@ -48,7 +48,7 @@ Path: [AndroidHCE](https://github.com/EricVoon0516/HCEAuthentication/tree/bbd375
 After reading the documentation provided by Android Developer, you will notice:
 > Before you develop an Android application with HCE features, please study the declaration of manifest and AID registration: https://developer.android.com/guide/topics/connectivity/nfc/hce#manifest-declaration
 > 
-> Without the registration of AID and delcaration of HCE service, you cannot enable HCE features in your application. Appication ID (AID) is important to help the Android phones for recognising the application protocol data unit (APDU) command from the NFC reader. You can have multiple AIDs (the AID shall be can within an application.
+> Without the registration of AID and delcaration of HCE service, you cannot enable HCE features in your application. Appication ID (AID) is important to help the Android phones for recognising the application protocol data unit (APDU) command from the NFC reader. You can have multiple AIDs within a category.
    1. Before registering the AID, you will need to declare `<service>` in **manifest**'s `<application>`, as shown:
 ```
 <application>
