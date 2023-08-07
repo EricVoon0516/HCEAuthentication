@@ -42,7 +42,7 @@ The connection of PN532:   https://how2electronics.com/interfacing-pn532-nfc-rfi
 
 ## Implementation
 ### Android Application Development
-Path: [AndroidHCE](https://github.com/EricVoon0516/HCEAuthentication/tree/bbd375988e1c878463f3124cf35a9e5a6d1b3a98/AndroidHCE)
+Path: [AndroidHCE](https://github.com/EricVoon0516/HCEAuthentication/tree/main/AndroidHCE)
 > Requires minSDK is **26 (Android 8.0)**
 > 
 After reading the documentation provided by Android Developer, you will notice:
