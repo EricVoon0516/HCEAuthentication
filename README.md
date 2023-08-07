@@ -110,7 +110,7 @@ public class MyHostApduService extends HostApduService {
 > You can have different conditions when the phones recognise the APDU command. Just code it, and have fun. :smile:
 > 
 ### Arduino Coding
-Path: [Arduino Coding](https://github.com/EricVoon0516/HCEAuthentication/tree/bbd375988e1c878463f3124cf35a9e5a6d1b3a98/APDU_Command)
+Path: [Arduino Coding](https://github.com/EricVoon0516/HCEAuthentication/tree/main/APDU_Command)
 
 > You can refer to the documentation[^1].
 > 
