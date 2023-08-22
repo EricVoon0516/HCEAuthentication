@@ -1,4 +1,5 @@
 # HCEAuthentication
+> I am the only one who is maintaining this repository, so if you have found any issue from this repository. Feel free to contact me [voontaylors0516@gmail.com](mailto:voontaylors0516@gmail.com), or raise the issue here.
 This repository contains development of security system with the implementation of HCE, HCE Android application development and Arduino codes.
 Using Arduino to enabling HCE features of Android phone. Get yourself familiar to Java <sup> (Java or Kotlin, it depends on yourself; I prefer Java because there are many resources that I found is in Java) </sup> and C (C & C++) programming languages.
 
